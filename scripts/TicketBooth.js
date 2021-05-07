@@ -29,22 +29,22 @@ eventHub.addEventListener("click", (event) => {
 });
 
 eventHub.addEventListener("click", (event) => {
+  if (event.target.id === "gameTicket") {
+    const gameEvent = new CustomEvent("gameTicketPurchased");
+    eventHub.dispatchEvent(gameEvent);
+  }
+});
+
+eventHub.addEventListener("click", (event) => {
+  if (event.target.id === "showTicket") {
+    const showEvent = new CustomEvent("showTicketPurchased");
+    eventHub.dispatchEvent(showEvent);
+  }
+});
+
+eventHub.addEventListener("click", (event) => {
   if (event.target.id === "fullPackageTicket") {
     const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased");
     eventHub.dispatchEvent(fullPackageEvent);
-  }
-});
-
-eventHub.addEventListener("click", (event) => {
-  if (event.target.id === "showTicket") {
-    const showEvent = new CustomEvent("showTicketPurchased");
-    eventHub.dispatchEvent(showEvent);
-  }
-});
-
-eventHub.addEventListener("click", (event) => {
-  if (event.target.id === "showTicket") {
-    const showEvent = new CustomEvent("showTicketPurchased");
-    eventHub.dispatchEvent(showEvent);
   }
 });

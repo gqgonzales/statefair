@@ -7,4 +7,12 @@ export const RideTicketHolders = () => {
         <div class="person rider"></div>
         `;
   });
+  eventHub.addEventListener(
+    "fullPackageTicketPurchased",
+    (fullPackageEvent) => {
+      contentTarget.innerHTML += `
+    <div class="person bigSpender"></div>
+    `;
+    }
+  );
 };

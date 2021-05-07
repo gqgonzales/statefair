@@ -7,4 +7,12 @@ export const GameTicketHolder = () => {
         <div class="person player"></div>
         `;
   });
+  eventHub.addEventListener(
+    "fullPackageTicketPurchased",
+    (fullPackageEvent) => {
+      contentTarget.innerHTML += `
+    <div class="person bigSpender"></div>
+    `;
+    }
+  );
 };

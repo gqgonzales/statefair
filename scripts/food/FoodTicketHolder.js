@@ -7,4 +7,12 @@ export const FoodTicketHolders = () => {
         <div class="person eater"></div>
         `;
   });
+  eventHub.addEventListener(
+    "fullPackageTicketPurchased",
+    (fullPackageEvent) => {
+      contentTarget.innerHTML += `
+    <div class="person bigSpender"></div>
+    `;
+    }
+  );
 };

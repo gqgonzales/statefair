@@ -7,12 +7,4 @@ export const ShowTicketHolder = () => {
         <div class="person gawker"></div>
         `;
   });
-  eventHub.addEventListener(
-    "fullPackageTicketPurchased",
-    (fullPackageEvent) => {
-      contentTarget.innerHTML += `
-    <div class="person bigSpender"></div>
-    `;
-    }
-  );
 };

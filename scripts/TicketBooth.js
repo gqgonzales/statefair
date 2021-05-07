@@ -1,22 +1,17 @@
 const contentTarget = document.querySelector(".entry");
 const eventHub = document.querySelector("#state-fair");
 
-eventHub.addEventListener();
-
 export const TicketBooth = () => {
-  contentTarget.innerHTML = `
+  contentTarget.innerHTML += `
         <div class="ticketBooth">
             <button id="rideTicket">Ride Ticket</button>
         </div>
     `;
 };
 
-const rideTicketSelectedEvent = new CustomEvent("ticketSelected", {
-  detail: {
-    ticketSelected: "rideTicket",
-  },
+eventHub.addEventListener("click", (event) => {
+  if (event.target.id === "rideTicket") {
+    const rideEvent = new CustomEvent("rideTicketPurchased");
+    eventHub.dispatchEvent(rideEvent);
+  }
 });
-
-eventHub.addEventListener(rideTicketSelectedEvent);
-
-const rideEvent = new CustomEvent("rideTicketPurchased");

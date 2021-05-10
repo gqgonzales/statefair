@@ -18,6 +18,8 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id === "rideTicket") {
     const rideEvent = new CustomEvent("rideTicketPurchased");
     eventHub.dispatchEvent(rideEvent);
+    const addCounter = new CustomEvent("ticket");
+    eventHub.dispatchEvent(addCounter);
   }
 });
 
@@ -25,6 +27,8 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id === "foodTicket") {
     const foodEvent = new CustomEvent("foodTicketPurchased");
     eventHub.dispatchEvent(foodEvent);
+    const addCounter = new CustomEvent("ticket");
+    eventHub.dispatchEvent(addCounter);
   }
 });
 
@@ -32,6 +36,8 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id === "gameTicket") {
     const gameEvent = new CustomEvent("gameTicketPurchased");
     eventHub.dispatchEvent(gameEvent);
+    const addCounter = new CustomEvent("ticket");
+    eventHub.dispatchEvent(addCounter);
   }
 });
 
@@ -39,6 +45,8 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id === "showTicket") {
     const showEvent = new CustomEvent("showTicketPurchased");
     eventHub.dispatchEvent(showEvent);
+    const addCounter = new CustomEvent("ticket");
+    eventHub.dispatchEvent(addCounter);
   }
 });
 
@@ -46,5 +54,7 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id === "fullPackageTicket") {
     const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased");
     eventHub.dispatchEvent(fullPackageEvent);
+    const addCounter = new CustomEvent("ticket");
+    eventHub.dispatchEvent(addCounter);
   }
 });
